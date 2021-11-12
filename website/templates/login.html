@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content%}
+<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='login.css') }}">
+<div class="center">
+  <div class="button-box">
+    <div id="btn"></div>
+      <button type="" id="btnsignin" class="toggle-btn" onclick="signin()">Đăng nhập</button>
+      <button type="" id="btnsignup" class="toggle-btn" onclick="signup()">Đăng ký</button>
+  </div>
+  <form id="signin" action="/login" method="POST" class="form-group">
+      <input
+        type="email"
+        class="form-field"
+        id="email"
+        name="email"
+        placeholder="Nhập Email"
+      />
+      <input
+        type="password"
+        class="form-field"
+        id="password"
+        name="password"
+        placeholder="Nhập Mật Khẩu"
+      />
+      <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+      <p>"Python website"</p>
+  </form>
+
+  <form id="signup" action="sign-up" method="POST" class="form-group">
+      <input
+        type="email"
+        class="form-field"
+        id="email"
+        name="email"
+        placeholder="Nhập Email"
+      />
+      <input
+        type="text"
+        class="form-field"
+        id="firstName"
+        name="firstName"
+        placeholder="Nhập tên"
+      />
+      <input
+        type="password"
+        class="form-field"
+        id="password1"
+        name="password1"
+        placeholder="Nhập mật khẩu"
+      />
+      <input
+        type="password"
+        class="form-field"
+        id="password2"
+        name="password2"
+        placeholder="Nhập lại mật khẩu"
+      />
+    <button type="submit" class="submit-btn">ĐĂNG KÝ</button>
+  </form>
+</div>
+
+<script>
+  var x = document.getElementById("signin")
+  var y = document.getElementById("signup")
+  var z = document.getElementById("btn")
+
+  var i = document.getElementById("btnsignin")
+  var u = document.getElementById("btnsignup")
+
+  function signup(){
+    x.style.left = "-500px";
+    y.style.left = "100px";
+    z.style.left = "110px";
+    u.style.color = "white";
+    i.style.color = "black";
+  }
+
+  function signin(){
+    x.style.left = "100px";
+    y.style.left = "600px";
+    z.style.left = "0";
+    i.style.color = "white";
+    u.style.color = "black";
+  }
+</script>
+{% endblock %}

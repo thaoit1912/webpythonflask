@@ -1,0 +1,430 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+
+<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='color.css') }}">
+<script
+type="text/javascript"
+src="{{ url_for('static', filename='script.js') }}"
+></script>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<div class=" scroll-up-btn">
+  <i class="fas fa-angle-up"></i>
+</div>
+<nav class="header backg">
+  <div class="max-width">
+      <div class="logo"><a href="#">PYTHON</a></div>
+      <ul class="menu">
+          <li><a href="#" class="menu-btn">TRANG CHỦ</a></li>
+          <li><a href="#ngonngu" class="menu-btn">NGÔN NGỮ</a></li>
+          <li><a href="#detail" class="menu-btn">CHI TIẾT</a></li>
+          <li><a href="#donggop" class="menu-btn">ĐÓNG GÓP</a></li>
+          <li><a id="logout" href="/logout">ĐĂNG XUẤT</a></li>
+      </ul>
+  </div>
+</nav>
+
+<section class="home-section section">
+  <div class="container">
+      <div class="row full-screen align-item-center">
+          <div class="home-text">
+              <p>Xin chào, chúng tôi</p>
+              <h1>NGUYỄN BÁ THẢO</h1>
+              <h1>TRẦN MINH TRIẾT</h1>
+              <h2>Sinh viên IT Văn Lang</h2>
+          </div>
+      </div>
+  </div>
+</section>
+<div id ="ngonngu" class="ngonngu">
+  <main><span><p>Lập Trình Python Nâng Cao</p></span> <br> <span id ="C12"><p>NGÔN NGỮ</p></span>
+  
+  </main>
+
+  <div  class="card-intro">
+    <div id="html" class="box">
+      <h2 class="name">
+        HTML
+      </h2>
+      <p class="detail">25%</p>
+  
+        <img src="static/image/html.png" alt="" class ="pic"></image>
+      
+    </div>
+    <div id="css" class="box">
+      <h2 class="name">
+        CSS
+      </h2>
+      <p class="detail">25%</p>
+        <img src="static/image/css.png" alt="" class ="pic"></image>
+      
+    </div>
+    <div id = "js"class="box">
+      <h2 class="name">JS</h2>
+      <p class="detail">10%</p>
+  
+        <img src="static/image/js.png" alt="" class ="pic"></image>
+    </div>
+    <div id ="python" class="box">
+      <h2 class="name">PYTHON</h2>
+      <p class="detail">30%</p>
+    
+        <img src="static/image/python.png" alt="" class ="pic"></image>
+    </div>
+    <div id = "sql"class="box">
+      <h2 class="name">SQLITE</h2>
+      <p class="detail">10%</p>
+        <img src="static/image/sql.png" alt="" class ="pic"></image>
+    </div>
+  </div>
+  
+  <div class="text">
+    <div class="mypic">
+      <h1>GIẢNG VIÊN: TRƯƠNG KHẮC TÙNG & KHƯU MINH CẢNH</h1>
+      <img class="pic1" src="" alt="" width="50%">
+      <img class="pic2"src="" alt="" width="50%">
+    </div>
+  </div>
+  <div class="about1">
+    <marquee>DESIGN WEB VỚI PYTHON QUA FRAMEWORK FLASK RẤT DUI.</marquee>
+  </div>
+</div>
+
+<div id ="detail">
+  <div class="du">
+  </div>
+</div>
+<div class="details">
+  <div class="detail-titile">
+    <H1>CHI TIẾT</H1>
+    <p>Xây dựng Website giới thiệu đồ án giữa kỳ Python với FrameWork Flask</p>
+    <small>Chức năng chủ yếu là đăng ký đăng nhập vào tận hưởng cái website phèn chua này</small>
+  </div>
+  <div class="area">
+    <div class="content-area">
+      <h1>Cấu trúc</h1>
+      <p>Mô hình MVC</p>
+      <textarea rows="20" cols="76" style="font-weight: bold;">  
+        website-----
+              static-------
+                          image
+                          index.js 
+                          script.js 
+                          style.css
+              templates----
+                          base.html 
+                          honme.html 
+                          login.html 
+                          sign_up.html
+              __init__.py
+              auth.py
+              database.db
+              models.py 
+              view.py 
+        main.py
+      </textarea>
+    </div>
+
+    <div class="content-area">
+      <h3 style="margin-right:42%">main.py</h3>
+        <p style="margin-right:31%">Dùng để thực thi chương trình</p>
+      <textarea rows="20" cols="76" style="font-weight: bold;">
+
+      from website import create_app
+
+      app = create_app()
+      
+      if __name__ == '__main__':
+          app.run(debug=True)
+ 
+    </textarea></div>
+      
+      <div class="content-area">
+        <h3 style="margin-right:41%">views.py</h3>
+        <p style="margin-left: 3%;">Dùng để điều khiển các response cho request đến trang home khi đăng nhập thành công</p>
+        <textarea rows="20" cols="76" style="font-weight: bold;"> 
+from flask import Blueprint, render_template, request, flash, jsonify
+from flask_login import login_required, current_user
+from . import db
+import json
+          
+views = Blueprint('views', __name__)
+          
+          
+@views.route('/', methods=['GET', 'POST'])
+@login_required
+def home():
+              
+  return render_template("home.html", user=current_user)</textarea>
+        </div>
+    
+        <div class="content-area">
+          <h3 style="margin-right:40%">models.py</h3>
+          <p style="margin-right: 26%;">Dữ liệu được sử dụng bởi chương trình </p>
+          <textarea rows="20" cols="76" style="font-weight: bold;">
+      
+            
+      
+            from . import db
+            from flask_login import UserMixin
+            from sqlalchemy.sql import func
+            from . import db
+      
+      
+      
+            class User(db.Model, UserMixin):
+                id = db.Column(db.Integer, primary_key=True)
+                email = db.Column(db.String(150), unique=True)
+                password = db.Column(db.String(150))
+                first_name = db.Column(db.String(150))
+       
+      
+      
+          </textarea>
+          </div>
+          <div class="content-area">
+            <h3 style="margin-right:37%">__init__.py</h3>
+            <p style="margin-right: 23%;">Tạo database với bảng User qua SQLAlchemy</p>
+            <textarea rows="20" cols="90" style="font-weight: bold;">
+            
+
+              from flask import Flask
+              from flask_sqlalchemy import SQLAlchemy
+              from os import path
+              from flask_login import LoginManager
+              
+              db = SQLAlchemy()
+              DB_NAME = "database.db"
+              
+              
+              def create_app():
+                  app = Flask(__name__)
+                  app.config['SECRET_KEY'] = 'abcdefgh'
+                  app.config['SQLALCHEMY_DATABASE_URI']= f'sqlite:///{DB_NAME}'
+                  db.init_app(app)
+              
+                  from .views import views
+                  from .auth import auth
+              
+                  app.register_blueprint(views,url_prefix='/')
+                  app.register_blueprint(auth,url_prefix='/')
+              
+                  from .models import User
+              
+                  create_database(app)
+              
+                  login_manager = LoginManager()
+                  login_manager.login_view ='auth.login'
+                  login_manager.init_app(app)
+              
+                  @login_manager.user_loader
+                  def load_user(id):
+                      return User.query.get(int(id))
+              
+                  return app
+              
+              
+              def create_database(app):
+                  if not path.exists('website/'
+                   + DB_NAME):
+                      db.create_all(app=app)
+                      print('Created Database!')
+              </textarea> 
+              </div>
+    <div class="content-area">
+        <h3 style="margin-right:37%">__auth__.py</h3>
+        <p style="margin-right: 26%;">Xử lý các thao tác của người dùng.</p>
+        <textarea rows="20" cols="90" style="font-weight: bold;">
+      from flask import Blueprint, render_template, request, flash, redirect, url_for
+      from .models import User
+      from werkzeug.security import generate_password_hash, check_password_hash
+      from . import db
+      from flask_login import login_user, login_required, logout_user, current_user
+
+
+      auth = Blueprint('auth', __name__)
+
+
+      @auth.route('/login', methods=['GET', 'POST'])
+      def login():
+        if request.method == 'POST':
+          email = request.form.get('email')
+          password = request.form.get('password')
+
+          user = User.query.filter_by(email=email).first()
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Logged in successfully!', category='success')
+                login_user(user, remember=True)
+                return redirect(url_for('views.home'))
+            else:
+                flash('Incorrect password, try again.', category='error')
+        else:
+            flash('Email does not exist.', category='error')
+
+      return render_template("login.html", user=current_user)
+
+
+      @auth.route('/logout')
+      @login_required
+      def logout():
+        logout_user()
+      return redirect(url_for('auth.login'))
+
+
+      @auth.route('/sign-up', methods=['GET', 'POST'])
+        def sign_up():
+      if request.method == 'POST':
+        email = request.form.get('email')
+        first_name = request.form.get('firstName')
+        password1 = request.form.get('password1')
+        password2 = request.form.get('password2')
+
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash('Email already exists.', category='error')
+        elif len(email) < 4:
+            flash('Email must be greater than 3 characters.', category='error')
+        elif len(first_name) < 2:
+            flash('First name must be greater than 1 character.', category='error')
+        elif password1 != password2:
+            flash('Passwords don\'t match.', category='error')
+        elif len(password1) < 7:
+            flash('Password must be at least 7 characters.', category='error')
+        else:
+            new_user = User(email=email, first_name=first_name, password=generate_password_hash(
+                password1, method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
+            login_user(new_user, remember=True)
+            flash('Account created!', category='success')
+            return redirect(url_for('views.home'))
+
+      return render_template("login.html", user=current_user)
+        </textarea>
+    </div>
+    
+
+  
+
+
+  </div>
+</div>
+<div id="donggop"><br></div>
+<div class="container-fluid py-5"  >
+  <div class="container1" style="font-family: Arial, Helvetica, sans-serif">
+      <div class="position-relative d-flex align-items-center justify-content-center">
+          <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">PYTHON</h1>
+          <h1 class="position-absolute text-uppercase text-primary" style="font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >ĐÓNG GÓP HOÀN THÀNH</h1>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-lg-6">
+              <h3 class="mb-4">Bá Thảo</h3>
+              <div class="border-left border-primary pt-2 pl-4 ml-2">
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px; font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Models</h5>
+                      <p class="mb-2"><strong>User</strong> | <small>09-11-2021</small></p>
+                      <p style="font-weight: bolder;">Xây dựng class User để thao tác trên database bao gồm có "id, email, password và first_name</p>
+                  </div>
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Controller</h5>
+                      <p class="mb-2"><strong>Xử lý đăng nhập</strong> | <small>09 - 11 - 2021</small></p>
+                      <p  style="font-weight: bolder;">Xây dựng Chức năng def login() xử lý thao tác đăng nhập của người dùng trên hệ thống</p>
+                  </div>
+                  <div class="position-relative ex-me mb-4">
+                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                    <h5 class="font-weight-bold mb-1">Xây dựng Controller</h5>
+                    <p class="mb-2"><strong>Xử lý đăng xuất</strong> | <small>09-11-2021</small></p>
+                    <p  style="font-weight: bolder;">Xây dựng Chức năng def logout() xử lý thao tác đăng xuất của người dùng trên hệ thống</p>
+                </div>
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Views</h5>
+                      <p class="mb-2"><strong>Giao diện trang chủ</strong> | <small>10-11-2021</small></p>
+                      <p style="font-weight: bolder;">Xây dựng giao diện trang chủ gồm các phần Trang chủ, Ngôn ngữ, Chi tiết, Đống góp và Đăng Xuất</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <h3 class="mb-4">Minh Triêt</h3>
+              <div class="border-left border-primary pt-2 pl-4 ml-2">
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Database</h5>
+                      <p class="mb-2"><strong>Database SQLAlchemy</strong> | <small>09-11-2021</small></p>
+                      <p style="font-weight: bolder;">Xây dựng database qua thư viện SQLAlchemy và kết nối với SQLITE</p>
+                  </div>
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Controller</h5>
+                      <p class="mb-2"><strong>Sign-in</strong> | <small>09-11-2021</small></p>
+                      <p style="font-weight: bolder;">Xây dựng chức năng def Sign-in xử lý thao tác đăng ký của người dùng trên hệ thống</p>
+                  </div>
+                  <div class="position-relative ex-me mb-4">
+                      <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                      <h5 class="font-weight-bold mb-1">Xây dựng Views</h5>
+                      <p class="mb-2"><strong>Giao diện đăng ký</strong> | <small>10-11-2021</small></p>
+                      <p style="font-weight: bolder;">Xây dựng giao diện đăng ký gồm các trường thông tin Email, Tên, Mật khẩu và Nhập lại mật khẩu</p>
+                  </div>
+                  <div class="position-relative ex-me mb-4">
+                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                    <h5 class="font-weight-bold mb-1">Xây dựng Views</h5>
+                    <p class="mb-2"><strong>Giao diện đăng ký</strong> | <small>10-11-2021</small></p>
+                    <p style="font-weight: bolder;">Xây dựng giao diện đăng nhập gồm các trường thông tin Email và Mật khẩu </p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col">
+        <h4>Trường</h4>
+        <ul>
+          <li><a href="#">ĐH VĂN LANG</a></li>
+      
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>THÀNH VIÊN</h4>
+        <ul>
+          <li><a href="#">NGUYỄN BÁ THẢO</a></li>
+          <li><a href="#">TRẦN MINH TRIẾT</a></li>
+    
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NGÔN NGỮ</h4>
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JS</a></li>
+          <li><a href="#">PYTHON</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>LIÊN HỆ</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/bathao.nguyen.505/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/bathao.nguyen.505/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/bathao.nguyen.505/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+{% endblock %}
