@@ -151,19 +151,21 @@ src="{{ url_for('static', filename='script.js') }}"
         <h3 style="margin-right:41%">views.py</h3>
         <p style="margin-left: 3%;">Dùng để điều khiển các response cho request đến trang home khi đăng nhập thành công</p>
         <textarea rows="20" cols="76" style="font-weight: bold;"> 
-from flask import Blueprint, render_template, request, flash, jsonify
-from flask_login import login_required, current_user
-from . import db
-import json
+
+
+      from flask import Blueprint, render_template, request, flash, jsonify
+      from flask_login import login_required, current_user
+      from . import db
+      import json
           
-views = Blueprint('views', __name__)
+      views = Blueprint('views', __name__)
           
           
-@views.route('/', methods=['GET', 'POST'])
-@login_required
-def home():
+      @views.route('/', methods=['GET', 'POST'])
+      @login_required
+      def home():
               
-  return render_template("home.html", user=current_user)</textarea>
+        return render_template("home.html", user=current_user)</textarea>
         </div>
     
         <div class="content-area">
@@ -243,6 +245,8 @@ def home():
         <h3 style="margin-right:37%">__auth__.py</h3>
         <p style="margin-right: 26%;">Xử lý các thao tác của người dùng.</p>
         <textarea rows="20" cols="90" style="font-weight: bold;">
+
+          
       from flask import Blueprint, render_template, request, flash, redirect, url_for
       from .models import User
       from werkzeug.security import generate_password_hash, check_password_hash
